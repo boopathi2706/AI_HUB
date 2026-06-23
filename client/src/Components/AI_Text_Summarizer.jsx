@@ -263,11 +263,11 @@ ${summaryData.highlights.join(', ')}`;
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="bg-neutral-900 text-yellow-400 p-2 rounded-xl flex items-center justify-center shadow-sm">
+            <div className="bg-[#7209b7] text-white p-2 rounded-xl flex items-center justify-center shadow-sm">
               <Sparkles className="h-5 w-5 animate-pulse" />
             </div>
             <div>
-              <span className="font-extrabold text-xl tracking-tight text-neutral-900 block">SUMM<span className="text-yellow-500 font-bold">.AI</span></span>
+              <span className="font-extrabold text-xl tracking-tight text-neutral-900 block">MagicPrompt<span className="text-[#7209b7] font-bold">.Text Summarizer</span></span>
               <span className="text-xs text-neutral-400 block -mt-1 font-medium">Next-gen intelligence engine</span>
             </div>
           </div>
@@ -275,18 +275,11 @@ ${summaryData.highlights.join(', ')}`;
           <div className="flex items-center space-x-3">
             <button 
               onClick={loadDemoText} 
-              className="text-xs font-semibold px-4 py-2 text-neutral-600 hover:text-neutral-900 bg-neutral-100 hover:bg-neutral-200 rounded-lg transition-colors"
+              className="text-xs font-semibold px-4 py-2 text-neutral-600 hover:text-white bg-neutral-100 hover:bg-[#7209b7] rounded-lg transition-colors"
             >
               Try Demo Text
             </button>
-            <a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="text-xs text-neutral-400 hover:text-neutral-600 font-medium hidden sm:inline"
-            >
-              v1.0.2 Stable
-            </a>
+            
           </div>
         </div>
       </header>
@@ -298,13 +291,13 @@ ${summaryData.highlights.join(', ')}`;
         <div className="bg-white rounded-2xl border border-neutral-150 p-6 sm:p-8 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2">
             <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">
-              Transform messy text into <span className="text-yellow-500 px-1 rounded-sm">golden knowledge</span>
+              Transform messy text into <span className="text-[#7209b7] px-1 rounded-sm">golden knowledge</span>
             </h1>
             <p className="text-neutral-500 text-sm max-w-2xl leading-relaxed">
               Upload documents, drag in files, or paste direct contents. Our contextual artificial intelligence model reads dense research files, extracting vital takeaways, summaries, and instant highlights.
             </p>
           </div>
-          <div className="flex items-center gap-2 text-xs text-neutral-500 bg-yellow-50 border border-yellow p-3 rounded-xl self-start md:self-center">
+          <div className="flex items-center gap-2 text-xs text-neutral-500 bg-purple-100 border border-yellow p-3 rounded-xl self-start md:self-center">
             <AlertCircle className="h-4 w-4 text-neutral-400 shrink-0" />
             <span>Files up to 15 pages supported in client-side reader</span>
           </div>
@@ -325,7 +318,7 @@ ${summaryData.highlights.join(', ')}`;
                     onClick={() => { setOption("Text"); setPdfError(""); }}
                     className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
                       option === "Text" 
-                        ? "bg-white text-neutral-900 shadow-sm" 
+                        ? "bg-[#7209b7] text-white shadow-sm" 
                         : "text-neutral-500 hover:text-neutral-800"
                     }`}
                   >
@@ -336,7 +329,7 @@ ${summaryData.highlights.join(', ')}`;
                     onClick={() => { setOption("Upload_Pdf"); setPdfError(""); }}
                     className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
                       option === "Upload_Pdf" 
-                        ? "bg-white text-neutral-900 shadow-sm" 
+                        ? "bg-[#7209b7] text-white shadow-sm" 
                         : "text-neutral-500 hover:text-neutral-800"
                     }`}
                   >
@@ -385,7 +378,7 @@ ${summaryData.highlights.join(', ')}`;
                       className={`w-full flex-grow border-2 border-dashed rounded-2xl flex flex-col items-center justify-center p-8 text-center cursor-pointer transition-all duration-200 ${
                         fileName 
                           ? "border-neutral-400 bg-neutral-50" 
-                          : "border-neutral-200 hover:border-yellow-400 hover:bg-yellow-50/20"
+                          : "border-neutral-200 hover:border-[#7209b7] hover:bg-purple-50"
                       }`}
                       style={{ minHeight: '300px' }}
                     >
@@ -455,9 +448,9 @@ ${summaryData.highlights.join(', ')}`;
                       onChange={(e) => setSummaryLength(e.target.value)}
                       className="w-full text-xs bg-white border border-neutral-200 rounded-lg p-2.5 font-medium text-neutral-700 focus:outline-none focus:border-neutral-900"
                     >
-                      <option value="short">Short Bulletins (~100 words)</option>
-                      <option value="medium">Medium Synopsis (~250 words)</option>
-                      <option value="detailed">In-depth Analysis (~500 words)</option>
+                      <option value="short">Short (100 words)</option>
+                      <option value="medium">Medium (250 words)</option>
+                      <option value="detailed">In-depth (500 words)</option>
                     </select>
                   </div>
 
@@ -501,7 +494,7 @@ ${summaryData.highlights.join(', ')}`;
                   className={`w-full mt-2 font-bold text-sm tracking-wide py-3.5 px-6 rounded-xl flex items-center justify-center space-x-2 transition-all shadow-sm ${
                     isLoading || !textInput.trim() || isParsingPdf
                       ? "bg-neutral-100 text-neutral-400 cursor-not-allowed"
-                      : "bg-neutral-900 hover:bg-neutral-800 text-white hover:shadow-md"
+                      : "bg-[#7209b7] hover:bg-purple-600 text-white hover:shadow-md"
                   }`}
                 >
                   {isLoading ? (
@@ -511,7 +504,7 @@ ${summaryData.highlights.join(', ')}`;
                     </>
                   ) : (
                     <>
-                      <Sparkles className="h-4 w-4 text-yellow-400" />
+                      <Sparkles className="h-4 w-4 text-white" />
                       <span>Generate AI Summary</span>
                       <ArrowRight className="h-4 w-4 ml-1" />
                     </>
@@ -535,7 +528,7 @@ ${summaryData.highlights.join(', ')}`;
                   <div className="flex items-center space-x-2">
                     <button
                       onClick={handleCopy}
-                      className="p-2 text-neutral-500 hover:text-neutral-900 hover:bg-neutral-150 rounded-lg transition-colors flex items-center space-x-1 text-xs font-semibold"
+                      className="p-2 text-neutral-500 hover:text-[#7209b7] hover:bg-neutral-150 rounded-lg transition-colors flex items-center space-x-1 text-xs font-semibold"
                       title="Copy full summary"
                     >
                       {copied ? (
@@ -553,7 +546,7 @@ ${summaryData.highlights.join(', ')}`;
 
                     <button
                       onClick={handleDownload}
-                      className="p-2 text-neutral-500 hover:text-neutral-900 hover:bg-neutral-150 rounded-lg transition-colors flex items-center space-x-1 text-xs font-semibold"
+                      className="p-2 text-neutral-500 hover:text-[#7209b7] hover:bg-neutral-150 rounded-lg transition-colors flex items-center space-x-1 text-xs font-semibold"
                       title="Download Summary Report"
                     >
                       <Download className="h-4 w-4" />
@@ -591,7 +584,7 @@ ${summaryData.highlights.join(', ')}`;
                     </div>
                     <button 
                       onClick={loadDemoText}
-                      className="text-xs text-yellow-600 bg-yellow-50 hover:bg-yellow-100 px-3 py-1.5 rounded-lg font-semibold transition-colors border border-yellow-200"
+                      className="text-xs text-[#7209b7] bg-purple-50 hover:bg-purple-100 px-3 py-1.5 rounded-lg font-semibold transition-colors border border-yellow-200"
                     >
                       Use Demo Content
                     </button>
@@ -604,7 +597,7 @@ ${summaryData.highlights.join(', ')}`;
                     <div className="space-y-4 max-w-md mx-auto w-full">
                       {/* Linear Loading Animation */}
                       <div className="relative h-1.5 w-full bg-neutral-100 rounded-full overflow-hidden">
-                        <div className="absolute h-full w-1/3 bg-yellow-400 rounded-full animate-infinite-loading" />
+                        <div className="absolute h-full w-1/3 bg-[#7209b7] rounded-full animate-infinite-loading" />
                       </div>
                       
                       <div className="space-y-2 text-center">
@@ -637,7 +630,7 @@ ${summaryData.highlights.join(', ')}`;
                           {summaryData.highlights.map((keyword, index) => (
                             <span 
                               key={index} 
-                              className="text-xs bg-yellow-100 text-yellow-800 font-bold px-3 py-1 rounded-full border border-yellow-200 hover:scale-105 transition-transform duration-100 cursor-default"
+                              className="text-xs bg-[#7209b7] text-white font-bold px-3 py-1 rounded-full border border-purple-200 hover:scale-105 transition-transform duration-100 cursor-default"
                             >
                               ✨ {keyword}
                             </span>

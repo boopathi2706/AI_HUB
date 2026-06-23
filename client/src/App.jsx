@@ -17,6 +17,7 @@ import AI_Quiz_Generator from './Components/AI_Quiz_Generator'
 import AI_Joke_Generator from './Components/AI_Joke_Generator'
 import AI_Recipe_Generator from './Components/AI_Recipe_Generator'
 import AI_Story_Generator from './Components/AI_Story_Generator'
+import Home from './Pages/Home'
 
 // import Splash_Screen from './Pages/Splash_Screen'
 
@@ -24,7 +25,7 @@ const App = () => {
   return (
     <BrowserRouter>
     <Routes>
-       {/* <Route path="/" element={<Splash_Screen/>}/> */}
+       <Route path="/" element={<Home/>}/>
 
 
       <Route path="/text-summarizer" element={<AI_Text_Summarizer />} />
@@ -44,7 +45,9 @@ const App = () => {
       <Route path="/quiz-generator" element={<AI_Quiz_Generator />} />
       <Route path="/joke-generator" element={<AI_Joke_Generator />} />
       <Route path="/recipe-generator" element={<AI_Recipe_Generator />} />
-      <Route path='/' element={<AI_Story_Generator/>}/>
+      <Route path='/story-generator' element={<AI_Story_Generator/>}/>
+
+
     </Routes>
     </BrowserRouter>
   )
