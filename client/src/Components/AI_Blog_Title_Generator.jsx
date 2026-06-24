@@ -214,7 +214,7 @@ Return only raw JSON. Do not wrap the JSON inside markdown code blocks.`;
             nextParts.push(
               <span 
                 key={`${match}-${index}-${Math.random()}`}
-                className="bg-yellow-200 text-black px-1.5 py-0.5 rounded font-extrabold shadow-sm inline-block mx-0.5"
+                className="bg-[#7209b7] text-white px-1.5 py-0.5 rounded font-extrabold shadow-sm inline-block mx-0.5"
               >
                 {match}
               </span>
@@ -244,19 +244,19 @@ Return only raw JSON. Do not wrap the JSON inside markdown code blocks.`;
       <header className="sticky top-0 z-50 bg-white border-b border-neutral-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="bg-black text-yellow-400 p-2 rounded-xl flex items-center justify-center">
-              <TrendingUp className="h-5 w-5" />
+            <div className="bg-[#7209b7] text-white p-2 rounded-xl flex items-center justify-center">
+              <Sparkles className="h-5 w-5 animate-pulse" />
             </div>
             <div>
-              <span className="font-extrabold text-xl tracking-tight text-black block">SUMM<span className="text-yellow-500 font-semibold">.TITLES</span></span>
-              <span className="text-[10px] text-neutral-400 block -mt-1 font-semibold uppercase tracking-wider">Aesthetic Blog Architecture</span>
+              <span className="font-extrabold text-xl tracking-tight text-black block">MagicPrompt<span className="text-[#7209b7] font-semibold">.Blog Titles</span></span>
+              {/* <span className="text-[10px] text-neutral-400 block -mt-1 font-semibold uppercase tracking-wider">Aesthetic Blog Architecture</span> */}
             </div>
           </div>
           
           <div className="flex items-center space-x-3">
             <button
               onClick={() => loadDemoTopic("How to cook premium sourdough artisan bread at home", "Culinary Arts")}
-              className="text-xs font-semibold px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-black rounded-lg transition-colors"
+              className="text-xs font-semibold px-4 py-2 bg-neutral-100 hover:bg-[#7209b7] hover:text-white cursor-pointer text-black rounded-lg transition-colors"
             >
               Autofill Sourdough Demo
             </button>
@@ -271,7 +271,7 @@ Return only raw JSON. Do not wrap the JSON inside markdown code blocks.`;
         <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-1.5">
             <h1 className="text-3xl font-extrabold tracking-tight text-black">
-              Generate 10 <span className="bg-yellow-200 px-1 rounded-sm">High-CTR Blog Titles</span>
+              Generate 10 <span className="text-[#7209b7] px-1 rounded-sm">High-CTR Blog Titles</span>
             </h1>
             <p className="text-neutral-500 text-sm max-w-2xl leading-relaxed">
               Design viral, catchy, and search engine friendly headers instantly. Our customized copywriting model picks up core ideas and embeds high-impact power words custom-highlighted in yellow.
@@ -279,7 +279,7 @@ Return only raw JSON. Do not wrap the JSON inside markdown code blocks.`;
           </div>
           <button
             onClick={() => loadDemoTopic("A guide on building robust React architectures in 2026", "Technology")}
-            className="self-start md:self-center text-xs font-bold px-4 py-2.5 bg-black hover:bg-neutral-800 text-white rounded-xl transition-colors shadow"
+            className="self-start md:self-center text-xs font-bold px-4 py-2.5 bg-[#7209b7] hover:bg-purple-500 cursor-pointer text-white rounded-xl transition-colors shadow"
           >
             Autofill Tech Demo
           </button>
@@ -347,10 +347,10 @@ Return only raw JSON. Do not wrap the JSON inside markdown code blocks.`;
                 <button
                   onClick={handleGenerateTitles}
                   disabled={isLoading || !topic.trim()}
-                  className={`w-full font-bold text-xs uppercase tracking-widest py-4 px-6 rounded-xl flex items-center justify-center space-x-2 transition-all shadow-sm ${
+                  className={`w-full font-bold text-xs uppercase cursor-pointer tracking-widest py-4 px-6 rounded-xl flex items-center justify-center space-x-2 transition-all shadow-sm ${
                     isLoading || !topic.trim()
                       ? "bg-neutral-100 text-neutral-400 cursor-not-allowed"
-                      : "bg-black hover:bg-neutral-800 text-white hover:shadow-md"
+                      : "bg-[#7209b7] hover:bg-purple-500 text-white hover:shadow-md"
                   }`}
                 >
                   {isLoading ? (
@@ -360,7 +360,7 @@ Return only raw JSON. Do not wrap the JSON inside markdown code blocks.`;
                     </>
                   ) : (
                     <>
-                      <Sparkles className="h-4 w-4 text-yellow-400" />
+                      <Sparkles className="h-4 w-4 text-white animate-bounce" />
                       <span>Generate 10 Titles</span>
                       <ArrowRight className="h-4 w-4 ml-1" />
                     </>
@@ -427,7 +427,7 @@ Return only raw JSON. Do not wrap the JSON inside markdown code blocks.`;
                   <div className="flex-grow flex flex-col justify-center space-y-6 py-12">
                     <div className="space-y-4 max-w-md mx-auto w-full">
                       <div className="relative h-1 w-full bg-neutral-100 rounded-full overflow-hidden">
-                        <div className="absolute h-full w-1/3 bg-yellow-400 rounded-full animate-infinite-loading" />
+                        <div className="absolute h-full w-1/3 bg-[#7209b7] rounded-full animate-infinite-loading" />
                       </div>
                       <div className="space-y-1.5 text-center">
                         <p className="text-xs font-bold text-black uppercase tracking-wider">Synthesizing High-CTR Options...</p>

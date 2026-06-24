@@ -215,7 +215,7 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
             newParts.push(
               <span 
                 key={`${match}-${matchIndex}-${Math.random()}`}
-                className="bg-yellow-200 text-black border-b-2 border-yellow-400 px-1 py-0.5 mx-0.5 rounded font-semibold cursor-help group relative inline-block transition-transform duration-75 hover:scale-105"
+                className="bg-[#7209b7] text-white border-b-2 border-[#7209b7] px-1 py-0.5 mx-0.5 rounded font-semibold cursor-help group relative inline-block transition-transform duration-75 hover:scale-105"
               >
                 {match}
                 <span className="absolute bottom-full left-1/2 -translate-x-1/2 bg-black text-white text-[10px] p-2.5 rounded shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none w-52 z-30 text-center font-normal mb-1.5 leading-normal">
@@ -251,19 +251,18 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
       <header className="sticky top-0 z-50 bg-white border-b border-neutral-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2.5">
-            <div className="bg-black text-yellow-400 p-2 rounded-xl flex items-center justify-center">
-              <SpellCheck className="h-5 w-5" />
+            <div className="bg-[#7209b7] text-white p-2 rounded-xl flex items-center justify-center">
+              <Sparkles className="h-5 w-5 animate-pulse" />
             </div>
             <div>
-              <span className="font-extrabold text-xl tracking-tight text-black block">LUCID<span className="text-yellow-500 font-light">.AI</span></span>
-              <span className="text-[10px] text-neutral-400 block -mt-1 font-mono uppercase tracking-widest">Grammar Engine</span>
+              <span className="font-extrabold text-xl tracking-tight text-black block">MagicPrompt<span className="text-[#7209b7] font-bold">.Grammar Checker</span></span>
             </div>
           </div>
           
           <div className="flex items-center space-x-3">
             <button 
               onClick={loadDemoText} 
-              className="text-xs font-semibold px-3.5 py-2 text-neutral-600 hover:text-black bg-neutral-100 hover:bg-neutral-200 rounded-lg transition-colors"
+              className="text-xs font-semibold px-3.5 py-2 text-neutral-600 hover:text-white bg-neutral-100 hover:bg-[#7209b7] cursor-pointer rounded-lg transition-colors"
             >
               Load Broken Demo
             </button>
@@ -304,7 +303,7 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
                   value={textInput}
                   onChange={(e) => setTextInput(e.target.value)}
                   placeholder="Paste your sentences or paragraphs here. We will analyze the wording, grammar constraints, punctuation, and flow instantly..."
-                  className="w-full flex-grow text-neutral-700 placeholder-neutral-400 bg-neutral-50/50 focus:bg-white border border-neutral-200 focus:border-black focus:ring-1 focus:ring-black rounded-xl p-4 text-sm resize-none focus:outline-none transition-all leading-relaxed"
+                  className="w-full flex-grow text-neutral-700 placeholder-neutral-400 bg-neutral-50/50 focus:bg-white border border-[#7209b7] focus:border-[#7209b7] focus:ring-1 focus:ring-[#7209b7] rounded-xl p-4 text-sm resize-none focus:outline-none transition-all leading-relaxed"
                   style={{ minHeight: '280px' }}
                 />
                 
@@ -353,10 +352,10 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
                 <button
                   onClick={handleGrammarCheck}
                   disabled={isLoading || !textInput.trim()}
-                  className={`w-full font-bold text-xs uppercase tracking-widest py-3.5 px-6 rounded-xl flex items-center justify-center space-x-2 transition-all shadow-sm ${
+                  className={`w-full font-bold text-xs uppercase cursor-pointer tracking-widest py-3.5 px-6 rounded-xl flex items-center justify-center space-x-2 transition-all shadow-sm ${
                     isLoading || !textInput.trim()
                       ? "bg-neutral-100 text-neutral-400 cursor-not-allowed"
-                      : "bg-black hover:bg-neutral-800 text-white hover:shadow-md"
+                      : "bg-[#7209b7] hover:bg-purple-500 text-white hover:shadow-md"
                   }`}
                 >
                   {isLoading ? (
@@ -366,7 +365,7 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
                     </>
                   ) : (
                     <>
-                      <Sparkles className="h-4 w-4 text-yellow-400 animate-bounce" />
+                      <Sparkles className="h-4 w-4 text-white animate-bounce" />
                       <span>Check Grammar & Spelling</span>
                       <ArrowRight className="h-4 w-4 ml-1" />
                     </>
@@ -458,7 +457,7 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
                   <div className="flex-grow flex flex-col justify-center space-y-6 py-12">
                     <div className="space-y-4 max-w-md mx-auto w-full">
                       <div className="relative h-1 w-full bg-neutral-100 rounded-full overflow-hidden">
-                        <div className="absolute h-full w-1/3 bg-yellow-400 rounded-full animate-infinite-loading" />
+                        <div className="absolute h-full w-1/3 bg-[#7209b7] rounded-full animate-infinite-loading" />
                       </div>
                       <div className="space-y-1.5 text-center">
                         <p className="text-xs font-bold text-black uppercase tracking-wider">Synthesizing Text Structural Fixes...</p>
@@ -477,7 +476,7 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
                     {/* Top Scoring header */}
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 bg-neutral-50 rounded-2xl border border-neutral-150">
                       <div className="flex items-center space-x-3">
-                        <div className="relative h-11 w-11 rounded-full border-4 border-yellow-200 flex items-center justify-center bg-white shadow-sm">
+                        <div className="relative h-11 w-11 rounded-full border-4 border-[#7209b7] flex items-center justify-center bg-white shadow-sm">
                           <span className="text-xs font-bold text-black">{results.score}%</span>
                         </div>
                         <div>
@@ -500,7 +499,7 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
                         {renderHighlightedText(results.correctedText, results.corrections)}
                       </div>
                       <span className="text-[10px] text-neutral-400 block mt-1 italic">
-                        Hover over words highlighted in <span className="bg-yellow-200 text-black px-1 rounded font-semibold">yellow</span> to show original terminology.
+                        Hover over words highlighted in <span className="bg-[#7209b7] text-white px-1 rounded font-semibold">purple</span> to show original terminology.
                       </span>
                     </div>
 
@@ -513,7 +512,7 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
                           {results.corrections.map((corr, idx) => (
                             <div key={idx} className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3 bg-neutral-50 hover:bg-neutral-100/50 rounded-xl border border-neutral-150 gap-2 transition-colors">
                               <div className="flex items-center space-x-2">
-                                <span className="text-[9px] uppercase font-bold px-1.5 py-0.5 rounded bg-yellow-100 text-yellow-800 border border-yellow-200">
+                                <span className="text-[9px] uppercase font-bold px-1.5 py-0.5 rounded bg-purple-200 text-[#7209b7] border border-purple-400">
                                   {corr.category}
                                 </span>
                                 <div className="text-xs text-neutral-400 font-mono">

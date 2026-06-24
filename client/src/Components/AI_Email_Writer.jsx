@@ -226,7 +226,7 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
             newParts.push(
               <span 
                 key={`${match}-${matchIndex}-${Math.random()}`}
-                className="bg-yellow-200 text-black px-1 py-0.5 rounded font-semibold border-b border-yellow-300 transition-colors"
+                className="bg-[#7209b7] text-white px-1 py-0.5 rounded font-semibold border-b border-purple-300 transition-colors"
                 title="AI Key Highlighted Item"
               >
                 {match}
@@ -257,19 +257,19 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
       <header className="sticky top-0 z-50 bg-white border-b border-neutral-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2.5">
-            <div className="bg-black text-yellow-400 p-2 rounded-xl flex items-center justify-center">
-              <Mail className="h-5 w-5" />
+            <div className="bg-[#7209b7] text-white p-2 rounded-xl flex items-center justify-center">
+              <Sparkles className="h-5 w-5 animate-pulse" />
             </div>
             <div>
-              <span className="font-extrabold text-xl tracking-tight text-black block">LUCID<span className="text-yellow-500 font-light">.EMAIL</span></span>
-              <span className="text-[10px] text-neutral-400 block -mt-1 font-mono uppercase tracking-widest">Aesthetic Copywriter</span>
+              <span className="font-extrabold text-xl tracking-tight text-black block">MagicPrompt<span className="text-[#7209b7] font-bold">.Email Writer</span></span>
+             
             </div>
           </div>
           
           <div className="flex items-center space-x-3">
             <button 
               onClick={loadDemoPrompt} 
-              className="text-xs font-semibold px-3.5 py-2 text-neutral-600 hover:text-black bg-neutral-100 hover:bg-neutral-200 rounded-lg transition-colors"
+              className="text-xs font-semibold px-3.5 py-2 text-neutral-600 hover:text-white bg-neutral-100 hover:bg-[#7209b7] cursor-pointer rounded-lg transition-colors"
             >
               Load Demo Brief
             </button>
@@ -390,10 +390,10 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
                 <button
                   onClick={handleGenerateEmail}
                   disabled={isLoading || !purpose.trim()}
-                  className={`w-full font-bold text-xs uppercase tracking-widest py-4 px-6 rounded-xl flex items-center justify-center space-x-2 transition-all shadow-sm ${
+                  className={`w-full font-bold text-xs uppercase cursor-pointer tracking-widest py-4 px-6 rounded-xl flex items-center justify-center space-x-2 transition-all shadow-sm ${
                     isLoading || !purpose.trim()
                       ? "bg-neutral-100 text-neutral-400 cursor-not-allowed"
-                      : "bg-black hover:bg-neutral-800 text-white hover:shadow-md"
+                      : "bg-[#7209b7] hover:bg-purple-500 text-white hover:shadow-md"
                   }`}
                 >
                   {isLoading ? (
@@ -403,7 +403,7 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
                     </>
                   ) : (
                     <>
-                      <Sparkles className="h-4 w-4 text-yellow-400" />
+                      <Sparkles className="h-4 w-4 text-white animate-bounce" />
                       <span>Generate Draft Copy</span>
                       <ArrowRight className="h-4 w-4 ml-1" />
                     </>
@@ -494,7 +494,7 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
                   <div className="flex-grow flex flex-col justify-center space-y-6 py-12">
                     <div className="space-y-4 max-w-md mx-auto w-full">
                       <div className="relative h-1 w-full bg-neutral-100 rounded-full overflow-hidden">
-                        <div className="absolute h-full w-1/3 bg-yellow-400 rounded-full animate-infinite-loading" />
+                        <div className="absolute h-full w-1/3 bg-[#7209b7] rounded-full animate-infinite-loading" />
                       </div>
                       <div className="space-y-1.5 text-center">
                         <p className="text-xs font-bold text-black uppercase tracking-wider">Synthesizing Email Tone Matrix...</p>
@@ -525,7 +525,7 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
                       
                       <div className="flex items-center space-x-2 text-[10px] text-neutral-400 mt-1 italic">
                         <Info className="h-3.5 w-3.5 shrink-0" />
-                        <span>Dynamic items and placeholder targets are automatically highlighted in <span className="bg-yellow-200 text-black px-1 rounded font-semibold">yellow</span>.</span>
+                        <span>Dynamic items and placeholder targets are automatically highlighted in <span className="bg-[#7209b7] text-white px-1 rounded font-semibold">purple</span>.</span>
                       </div>
                     </div>
 
@@ -535,7 +535,7 @@ Do not return any markdown or markdown code blocks (such as \`\`\`json), just re
                         <label className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block">Action Keywords Included ({emailData.highlights.length})</label>
                         <div className="flex flex-wrap gap-1.5">
                           {emailData.highlights.map((tag, i) => (
-                            <span key={i} className="text-[10px] bg-neutral-100 text-neutral-700 font-bold px-2 py-0.5 rounded border border-neutral-150">
+                            <span key={i} className="text-[10px] bg-purple-100 text-[#7209b7] font-bold px-2 py-0.5 rounded border border-purple-350">
                               {tag}
                             </span>
                           ))}

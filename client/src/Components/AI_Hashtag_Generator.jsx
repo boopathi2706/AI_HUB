@@ -270,19 +270,19 @@ Return ONLY raw, un-wrapped JSON. Do not wrap inside code block tags.`;
       <header className="sticky top-0 z-50 bg-white border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="bg-black text-yellow-400 p-2 rounded-xl flex items-center justify-center">
-              <Hash className="h-5 w-5" />
+            <div className="bg-[#7209b7] text-white p-2 rounded-xl flex items-center justify-center">
+              <Sparkles className="h-5 w-5 animate-pulse" />
             </div>
             <div>
-              <span className="font-extrabold text-xl tracking-tight text-black block">SUMM<span className="text-yellow-500 font-semibold">.HASHTAGS</span></span>
-              <span className="text-[10px] text-neutral-400 block -mt-1 font-semibold uppercase tracking-wider">Linguistic Tag Architecture</span>
+              <span className="font-extrabold text-xl tracking-tight text-black block">MagicPrompt<span className="text-[#7209b7] font-bold">.HASHTAGS</span></span>
+              {/* <span className="text-[10px] text-neutral-400 block -mt-1 font-semibold uppercase tracking-wider">Linguistic Tag Architecture</span> */}
             </div>
           </div>
           
           <div className="flex items-center space-x-3">
             <button
               onClick={() => loadDemoTopic("Organic home roasted dark coffee business launching locally", "Instagram", "Aesthetic & Organic")}
-              className="text-xs font-semibold px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-black rounded-lg transition-colors"
+              className="text-xs font-semibold px-4 py-2 bg-neutral-100 hover:bg-[#7209b7] hover:text-white cursor-pointer text-black rounded-lg transition-colors"
             >
               Autofill Coffee Demo
             </button>
@@ -297,7 +297,7 @@ Return ONLY raw, un-wrapped JSON. Do not wrap inside code block tags.`;
         <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-1.5">
             <h1 className="text-3xl font-extrabold tracking-tight text-black">
-              Generate Optimized <span className="bg-yellow-200 px-1 rounded-sm">AI Hashtags</span>
+              Generate Optimized <span className="text-[#7209b7] px-1 rounded-sm">AI Hashtags</span>
             </h1>
             <p className="text-neutral-500 text-sm max-w-2xl leading-relaxed">
               Design viral, categorized, and platform-specific metadata tags instantly. Our customized copywriting model crafts high-relevance hashtags with customized yellow highlighting to elevate your visibility.
@@ -305,7 +305,7 @@ Return ONLY raw, un-wrapped JSON. Do not wrap inside code block tags.`;
           </div>
           <button
             onClick={() => loadDemoTopic("Next-gen AI code completion and developer workspace app", "LinkedIn", "Professional & Informative")}
-            className="self-start md:self-center text-xs font-bold px-4 py-2.5 bg-black hover:bg-neutral-800 text-white rounded-xl transition-colors shadow"
+            className="self-start md:self-center text-xs font-bold px-4 py-2.5 bg-[#7209b7] hover:bg-purple-500 cursor-pointer text-white rounded-xl transition-colors shadow"
           >
             Autofill Tech Demo
           </button>
@@ -365,13 +365,13 @@ Return ONLY raw, un-wrapped JSON. Do not wrap inside code block tags.`;
                           key={p.name}
                           type="button"
                           onClick={() => setPlatform(p.name)}
-                          className={`flex items-center space-x-2 p-3 text-xs font-semibold rounded-xl border transition-all ${
+                          className={`flex items-center space-x-2 p-3 text-xs font-semibold rounded-xl border cursor-pointer transition-all ${
                             isSelected 
-                              ? "bg-black text-white border-black" 
+                              ? "bg-[#7209b7] text-white border-purple" 
                               : "bg-white text-neutral-600 border-neutral-200 hover:bg-neutral-50"
                           }`}
                         >
-                          <Icon className={`h-4 w-4 ${isSelected ? "text-yellow-400" : "text-neutral-400"}`} />
+                          <Icon className={`h-4 w-4 ${isSelected ? "text-white" : "text-neutral-400"}`} />
                           <span>{p.name}</span>
                         </button>
                       );
@@ -399,7 +399,7 @@ Return ONLY raw, un-wrapped JSON. Do not wrap inside code block tags.`;
                 <div className="space-y-2">
                   <div className="flex justify-between items-center text-[10px] font-bold text-neutral-400 uppercase tracking-wider">
                     <span>Target Tag Count</span>
-                    <span className="text-black bg-yellow-200 px-1.5 py-0.5 rounded font-mono font-extrabold">{tagCount} tags</span>
+                    <span className="text-white bg-[#7209b7] px-1.5 py-0.5 rounded font-mono font-extrabold">{tagCount} tags</span>
                   </div>
                   <input
                     type="range"
@@ -408,7 +408,7 @@ Return ONLY raw, un-wrapped JSON. Do not wrap inside code block tags.`;
                     step="1"
                     value={tagCount}
                     onChange={(e) => setTagCount(parseInt(e.target.value))}
-                    className="w-full accent-black h-1 bg-neutral-100 rounded-lg cursor-pointer"
+                    className="w-full accent-[#7209b7] h-1 bg-neutral-100 rounded-lg cursor-pointer"
                   />
                   <div className="flex justify-between text-[9px] text-neutral-400 font-bold">
                     <span>MIN: 5</span>
@@ -426,7 +426,7 @@ Return ONLY raw, un-wrapped JSON. Do not wrap inside code block tags.`;
                   className={`w-full font-bold text-xs uppercase tracking-widest py-4 px-6 rounded-xl flex items-center justify-center space-x-2 transition-all shadow-sm ${
                     isLoading || !topic.trim()
                       ? "bg-neutral-100 text-neutral-400 cursor-not-allowed"
-                      : "bg-black hover:bg-neutral-800 text-white hover:shadow-md"
+                      : "bg-[#7209b7] hover:bg-purple-500 text-white cursor-pointer hover:shadow-md"
                   }`}
                 >
                   {isLoading ? (
@@ -516,7 +516,7 @@ Return ONLY raw, un-wrapped JSON. Do not wrap inside code block tags.`;
                   <div className="flex-grow flex flex-col justify-center space-y-6 py-12">
                     <div className="space-y-4 max-w-md mx-auto w-full">
                       <div className="relative h-1 w-full bg-neutral-100 rounded-full overflow-hidden">
-                        <div className="absolute h-full w-1/3 bg-yellow-400 rounded-full animate-infinite-loading" />
+                        <div className="absolute h-full w-1/3 bg-[#7209b7] rounded-full animate-infinite-loading" />
                       </div>
                       <div className="space-y-1.5 text-center">
                         <p className="text-xs font-bold text-black uppercase tracking-wider">Extracting Niche Core Metadata...</p>
